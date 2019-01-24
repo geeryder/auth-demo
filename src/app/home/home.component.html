@@ -1,0 +1,9 @@
+<h1>Welcome {{auth.user?.email}}</h1>
+<p>{{loggedInMessage}}</p>
+<p> You are {{auth.isLoggedIn ? '':' not '}} Logged  in</p>
+
+<p *ngFor = "let item of items | async "> 
+    {{item.name}}
+</p>
+<button (click)="logout()" class="btn btn-danger"> Logout </button>
+
